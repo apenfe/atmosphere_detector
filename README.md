@@ -2,21 +2,7 @@
 Arduino that is capable of carrying out a study of explosive or dangerous atmospheres.
 
 ## The aim
-El objetivo principal de este trabajo es definir qué es un espacio confinado, recoger las diferentes
-normativas que nos afectan como marinos en este ámbito, conocer los dispositivos que existen
-para detectar gases y, por último, diseñar un prototipo electrónico de bajo coste para ser usado en
-buques no SOLAS basado en Arduino Uno y Raspberry pi 3B. Usando este último como medio
-para programar el procesador de Arduino, además nos mostrará físicamente las mediciones
-durante el proceso de desarrollo y nos ayudará a saber como actuar en diferentes situaciones.
-En primer lugar, se establecerán las definiciones y se expondrán las diferentes normativas a nivel
-nacional, europeo e internacional.
-Se expondrán los principales modelos de detectores de gases y los cursos mas destacados sobre
-espacios confinados.
-En segundo lugar, se expondrán los diferentes sistemas electrónicos a utilizar, se mostrará el
-montaje, la programación y el calibrado de los sensores.
-Por último, se mostrará el funcionamiento del aparato, se estudiarán limitaciones, posibles
-mejoras y fallos del sistema.
-Se expondrá el modelo como un producto BETA4 y se hará presupuesto para el nuevo prototipo.
+The main objective of this work is to define what a confined space is, gather the different regulations that affect us as sailors in this field, learn about the devices used for gas detection, and finally, design a low-cost electronic prototype to be used on non-SOLAS vessels based on Arduino Uno and Raspberry Pi 3B. Using the latter as a means to program the Arduino processor, it will also physically display the measurements during the development process and help us understand how to act in different situations. First, definitions will be established and the different regulations at the national, European, and international levels will be presented. The main gas detector models and the most prominent courses on confined spaces will be discussed. Secondly, the different electronic systems to be used will be presented, showing the assembly, programming, and calibration of the sensors. Finally, the operation of the device will be demonstrated, limitations, possible improvements, and system failures will be studied. The model will be presented as a BETA4 product, and a budget will be made for the new prototype.
 
 ## Technologies and libraries
 Arduino
