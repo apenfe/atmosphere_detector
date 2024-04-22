@@ -33,7 +33,7 @@ BUZZER
 RESISTOR 
 JUMPERS
 
-![Wiring Diagram](ejemplo.jpg)
+![Wiring Diagram](others/wiringdiagram.png)
 
 
 
