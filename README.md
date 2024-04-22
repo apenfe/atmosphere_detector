@@ -20,6 +20,7 @@ Se expondrá el modelo como un producto BETA4 y se hará presupuesto para el nue
 
 ## Technologies and libraries
 Arduino
+Fritzing
 
 ## Materials and wiring diagram
 
@@ -31,5 +32,8 @@ OLED X 32
 BUZZER
 RESISTOR 
 JUMPERS
+
+![Wiring Diagram](ejemplo.jpg)
+
 
 
