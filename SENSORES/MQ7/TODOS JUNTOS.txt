@@ -1,0 +1,60 @@
+int MQ135 = 2;
+void setup() {
+  Serial.begin(9600);
+pinMode(MQ135, INPUT);
+  
+}
+
+void loop() {
+  
+  int MQ7 = analogRead(A1); //Lemos la salida analógica  del MQ7
+  int MQ9 = analogRead(A0); //Lemos la salida analógica  del MQ9
+//--------------MQ7-------------------------------------------
+  float voltajeMQ7 = MQ7 * (5.0 / 1023.0); //Convertimos la lectura en un valor de voltaje
+  float RsMQ7=1000*((5-voltajeMQ7)/voltajeMQ7);  //Calculamos Rs con un RL de 1k
+  double CO=102*pow(RsMQ7/4242.424, -1.52); // calculamos la concentración  de alcohol con la ecuación obtenida.
+//--------------MQ9---------------------------------------
+  float voltajeMQ9 = MQ9 * (5.0 / 1023.0); //Convertimos la lectura en un valor de voltaje
+  float RsMQ9=1000*((5-voltajeMQ9)/voltajeMQ9);  //Calculamos Rs con un RL de 1k
+  double METANO=1065.76*pow(RsMQ9/460.820513, -2.04); // calculamos la concentración  de alcohol con la ecuación obtenida.
+//--------------MQ135------------------------------------------
+ boolean ESTADOMQ135 = digitalRead(MQ135);//Leemos el sensor
+  if(MQ135) //si la salida del sensor es 1
+  {
+    Serial.println("LIMPIO");
+  }
+  else //si la salida del sensor es 0
+  {
+    Serial.println("PELIGRO");
+  }
+
+  //-------Enviamos los valores por el puerto serial------------
+  
+  Serial.print("    voltajeMQ7:");
+  Serial.print(voltajeMQ7);
+  
+  Serial.print("    MONOXIDO CARBONICO:");
+  Serial.print(CO);
+  Serial.println("PPM");
+
+Serial.print("    voltajeMQ9:");
+  Serial.print(voltajeMQ9);
+  
+  Serial.print("    METANO:");
+  Serial.print(METANO);
+  Serial.println("PPM");
+  
+  Serial.print(",");
+  Serial.println(CO);
+  Serial.print(",");
+
+
+
+
+
+
+
+
+  
+  delay(1000);
+}
